@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+    background-color:#cfcebe;
+    margin: 0;
+    padding:0;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    background: #002460;
+    padding:2rem 5%;
+    justify-content: space-between;
+    top:0;left:0;right:0;
+}
+.header img{
+    width:10vw;
+    height:100%;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.5vw;
+    color:#ffff;
+    text-decoration: none;
+}
+
+.header .navbar a:hover{
+    color:red;
+}
+.header.active{
+    padding:2rem 9%;
+    box-shadow: #c0c0c0;
+}
+.container{
+    margin-top:50px;
+    margin-bottom: 50px;
+    width:100vw;
+    display:grid;
+    grid-template-rows: repeat(7,1fr);
+    gap: 40px;
+    justify-content: center;
+    box-sizing:border-box;
+}
+.container div{
+    height: 400px;
+    width: 75vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+#box{
+    background-color: #ffffff;
+    width:80vw;
+    height:30vh;
+    box-shadow: 10px 10px 8px #888888;
+    overflow: hidden;
+}
+#box div{
+    font-size: 2vw; 
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#box div img{
+    width: 20px;
+    height:20px;
+} 
+#box div div{
+    height: 5px;
+    width: 70vw;
+    background-color: #c0c0c0;
+}
+.container1{
+    margin-top:50px;
+    margin-bottom: 50px;
+    width:100vw;
+    display:grid;
+    grid-template-rows: repeat(1,1fr);
+    gap: 40px;
+    justify-content: center;
+    box-sizing:border-box;
+}
+.container1 div{
+    height: 400px;
+    width: 80vw;
+    overflow:hidden;
+}
+
+#box1{
+    background-color: #ffffff;
+    width:80vw;
+    height:50vh;
+    box-shadow: 10px 10px 8px #888888;
+}
+#box1 div{
+    margin-top: 20px;
+    font-size: 2.5vw;
+    margin: 20px;
+}
+.container2{
+    margin-top:50px;
+    margin-bottom: 50px;
+    width:100vw;
+    display:grid;
+    grid-template-rows: repeat(1,1fr);
+    gap: 40px;
+    justify-content: center;
+    box-sizing:border-box;
+}
+.container2 div{
+    height: 400px;
+    width: 80vw;
+}
+.container3{
+    margin-top:50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    box-sizing:border-box;
+}
+#box2{
+    background-color: #002460;
+    width:100vw;
+    height:30vh;
+    color: #ffff;
+    font-weight:900;
+}
+#box2 div{
+    margin-top: 20px;
+    padding-left: 90px;
+    font-size: 4vw;
+}
+.container div div button{
+    border-radius: 50px;
+    background-image: linear-gradient(#003a99, #001844);
+    height: 4vh;
+    width: 16vw;
+    border: none;
+    color: #ffff;
+    font-size: 1.7vw;
+    box-shadow: 10px 10px 8px #888888;
+}
+.services img{
+    width: 100vw;
+    height: 80vh;
+}
+#blog{
+    background-color: #002460;
+    width: 100vw;
+    height: 80px;
+}
+#blog h1{
+    font-size: 50px;
+    height:100px;
+    padding-top: 10px;
+}
+#about{
+    background-color: #002460;
+    width: 100vw;
+    height: 80px;
+}
+#about h1{
+    font-size: 50px;
+    height:100px;
+    padding-top: 10px;
+}
+#service{
+    background-color:#002460;
+    width: 100vw;
+    height: 15vh;
+}
+#service h1{
+    font-size: 50px;
+    height:100px;
+    padding-top: 10px;
+}
+#clients{
+    background-color:#002460;
+    width: 100vw;
+    height: 80px;
+}
+#clients h1{
+    font-size: 50px;
+    height:100px;
+    padding-top: 10px;
+}
+.client{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+}
+.client div{
+    padding: 10px 40%;
+}
+.client img{
+    width: 100px;
+}
+.footer{
+    background-color:rgb(0, 0, 0);
+    height:40vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 20px;
+    color:#ffff;
+}
+        
+
+@media screen and (min-width: 580px) {
+    body{
+    background-color:#cfcebe;
+    margin: 0;
+    padding:0;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    background: #002460;
+    padding:2rem 5%;
+    justify-content: space-between;
+    top:0;left:0;right:0;
+}
+.header img{
+    width:10vw;
+    height:100%;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.5vw;
+    color:#ffff;
+    text-decoration: none;
+}
+
+.header .navbar a:hover{
+    color:red;
+}
+.header.active{
+    padding:2rem 9%;
+    box-shadow: #c0c0c0;
+}
+.container{
+    margin-top:50px;
+    margin-bottom: 50px;
+    width:100vw;
+    display:grid;
+    grid-template-rows: repeat(7,1fr);
+    gap: 40px;
+    justify-content: center;
+    box-sizing:border-box;
+}
+.container div{
+    height: 400px;
+    width: 75vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+#box{
+    background-color: #ffffff;
+    width:80vw;
+    height:60vh;
+    box-shadow: 10px 10px 8px #888888;
+    overflow: hidden;
+}
+#box div{
+    font-size: 2vw; 
+}
+.banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#box div img{
+    width: 40px;
+    height:40px;
+} 
+#box div div{
+    height: 5px;
+    width: 70vw;
+    background-color: #c0c0c0;
+}
+.container1{
+    margin-top:50px;
+    margin-bottom: 50px;
+    width:100vw;
+    display:grid;
+    grid-template-rows: repeat(1,1fr);
+    gap: 40px;
+    justify-content: center;
+    box-sizing:border-box;
+}
+.container1 div{
+    height: 400px;
+    width: 80vw;
+    overflow:hidden;
+}
+
+#box1{
+    background-color: #ffffff;
+    width:100%;
+    height:100%;
+    box-shadow: 10px 10px 8px #888888;
+}
+#box1 div{
+    margin-top: 20px;
+    padding-left: 90px;
+    font-size: 2.5vw;
+    overflow-wrap: break-word;
+}
+.container2{
+    margin-top:50px;
+    margin-bottom: 50px;
+    width:100vw;
+    display:grid;
+    grid-template-rows: repeat(1,1fr);
+    gap: 40px;
+    justify-content: center;
+    box-sizing:border-box;
+}
+.container2 div{
+    height: 400px;
+    width: 80vw;
+}
+.container3{
+    margin-top:50px;
+    margin-bottom: 50px;
+    justify-content: center;
+    box-sizing:border-box;
+}
+#box2{
+    background-color: #002460;
+    width:100vw;
+    height:100%;
+    color: #ffff;
+    font-weight:900;
+}
+#box2 div{
+    margin-top: 20px;
+    padding-left: 90px;
+    font-size: 4vw;
+}
+.container div div button{
+    border-radius: 50px;
+    background-image: linear-gradient(#003a99, #001844);
+    height: 7vh;
+    width: 15vw;
+    border: none;
+    color: #ffff;
+    font-size: 1.7vw;
+    box-shadow: 10px 10px 8px #888888;
+}
+.services img{
+    width: 100vw;
+    height: 120vh;
+}
+#blog{
+    background-color: #002460;
+    width: 100%;
+    height: 80px;
+}
+#blog h1{
+    font-size: 50px;
+    height:100px;
+    padding-top: 10px;
+}
+#about{
+    background-color: #002460;
+    width: 100vw;
+    height: 80px;
+}
+#about h1{
+    font-size: 50px;
+    height:100px;
+    padding-top: 10px;
+}
+#service{
+    background-color:#002460;
+    width: 100vw;
+    height: 15vh;
+}
+#service h1{
+    font-size: 50px;
+    height:100px;
+    padding-top: 10px;
+}
+#clients{
+    background-color:#002460;
+    width: 100vw;
+    height: 80px;
+}
+#clients h1{
+    font-size: 50px;
+    height:100px;
+    padding-top: 10px;
+}
+.client{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+}
+.client div{
+    padding: 10px 40%;
+}
+.client img{
+    width: 100px;
+}
+.footer{
+    background-color:rgb(0, 0, 0);
+    height:40vh;
+    width: 100vw;
+    text-align: center;
+    font-size: 20px;
+    color:#ffff;
+}
+}
+    </style>
+</head>
+<body>
+    <section>
+        <header class="header">    
+            <a href="#" class="logo"><img src="assets/images/logo.png" alt=""></a>
+                <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#service">Services</a>
+                <a href="#">News</a>
+                <a href="#about">About Us</a>
+                <a href="#clients">Our Clients</a>
+                <a href="#contact">Contact Us</a>
+            </nav>    
+        </header>
+    </section>
+    <div class="services">
+        <img src="assets/images/service.jpeg" alt="">
+    </div>
+    <div class="service" id="service">
+        <center><h1>Services</h1></center>
+    </div> 
+<section>
+    <div class="container">
+        <div class="box" id="box">
+            <div>
+                <banner class="banner">    
+                    <h3>Digital Media Strategy</h3>
+                    <nav class="navbar">
+                            <img src="assets/images/icon6.png" alt="">
+                    </nav>    
+                </banner>
+                <div></div>
+                <p>A cutting edge strategy that completely transforms your key<br> perfomance indicators in the long run and gives you a digital <br>footprint.</p>
+                <a href="#contact"><center><button>Contact Us</button></center> </a>             
+            </div>
+        </div>
+        <div class="box" id="box">
+            <div>
+                <banner class="banner">    
+                    <h3>Social Media</h3>
+                    <nav class="navbar">
+                            <img src="assets/images/icon6.png" alt="">
+                    </nav>    
+                </banner>
+                <div></div>
+                <p>Support, management and content creation for your social media <br>platforms to increase your reach and capitalise on the strength<br> of social media marketing.</p>
+                <a href="#contact"><center><button>Contact Us</button></center></a>
+            </div>
+        </div>
+        <div class="box" id="box">
+            <div>
+                <banner class="banner">    
+                    <h3>Web Development</h3>
+                    <nav class="navbar">
+                            <img src="assets/images/icon6.png" alt="">
+                    </nav>    
+                </banner>
+                <div></div>
+                <p>Website building and maintenance on a consistent basis, for a <br>perfect user friendly experience.</p>
+                <a href="#contact"><center><button>Contact Us</button></center></a>
+            </div>
+        </div>
+        <div class="box" id="box">
+            <div>
+                <banner class="banner">    
+                    <h3>Mobile Application Development</h3>
+                    <nav class="navbar">
+                            <img src="assets/images/icon6.png" alt="">
+                    </nav>    
+                </banner>
+                <div></div>
+                <p>Creation and development of mobile friendly and innovation applications <br>that suit user needs.</p>
+                <a href="#contact"><center><button>Contact Us</button></center></a>
+            </div>
+        </div>
+        <div class="box" id="box">
+            <div>
+                <banner class="banner">    
+                    <h3>Photography</h3>
+                    <nav class="navbar">
+                            <img src="assets/images/icon6.png" alt="">
+                    </nav>    
+                </banner>
+                <div></div>
+                <p>Provision of quality photography and videography services for <br>events, products and casual shoots.</p>
+                <a href="#contact"><center><button>Contact Us</button></center></a>
+            </div>
+        </div>
+        <div class="box" id="box">
+            <div>
+                <banner class="banner">    
+                    <h3>Branding</h3>
+                    <nav class="navbar">
+                            <img src="assets/images/icon6.png" alt="">
+                    </nav>    
+                </banner>
+                <div></div>
+                <p>Provision of branding services including premise branding<br> promotional material, corporate branding services, brand<br> management and consultancy service.</p>
+                <a href="#contact"><center><button>Contact Us</button></center></a>
+            </div>
+        </div>
+        <div class="box" id="box">
+            <div>
+                <banner class="banner">    
+                    <h3>Design</h3>
+                    <nav class="navbar">
+                            <img src="assets/images/icon6.png" alt="">
+                    </nav>    
+                </banner>
+                <div></div>
+                <p>You can entrust us with your brand image through our exclusive <br>graphic design services that make you stand out.</p>
+                <a href="#contact"><center><button>Contact Us</button></center></a>
+            </div>
+        </div>
+    </div>   
+</section> 
+    <div class="blog" id="blog">
+         <center><h1>Blog</h1></center>
+    </div>
+<section>
+    <div class="container1">
+        <div class="box1" id="box1">
+            <div>
+                <h1>Headline</h1>
+                <h4>By John Deo</h4>
+                <h4>12.08.2019</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque cupiditate minima doloribus quidem. Quam, velit. Veniam sequi enim tempore. Atque exercitationem, sapiente labore praesentium dignissimos, aut explicabo minima ea odit, numquam non veritatis voluptates! <a href="">more</a></p>                      
+            </div>
+        </div>
+    </div>   
+</section>   
+<div class="about" id="about">
+    <center><h1>About</h1></center>
+</div>   
+<section>
+    <div class="container2">
+        <div class="box2" id="box2">
+            <div>
+                <p>Reserved is a Zimbabwe based digital creative agency with key interests in social media marketing, web design, branding, mobile application development, photography and graphic design.</p>
+            </div>
+        </div>
+    </div>   
+</section> 
+<div class="clients" id="clients">
+    <center><h1>Our Clients</h1></center>
+</div> 
+<div class="container3">
+    <div class="client" id="client">
+        <div><img src="assets/images/school.png" alt=""></div>
+        <div><img src="assets/images/hangover.png" alt=""></div>
+        <div><img src="assets/images/capital_foods.png" alt=""></div>
+        <div><img src="assets/images/velvet.png" alt=""></div>
+        <div><img src="assets/images/Daruler.png" alt=""></div>
+        <div><img src="assets/images/sans_bourne_logo.png" alt=""></div>
+    </div>
+</div>
+<section>
+<footer class="footer">    
+    <h1 id="contact">Contact Us</h1>
+    <p>
+        +263 775 353 142/ +263 775 843 122
+    </p>
+    <p>
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+        <a href=""><img src="" alt=""></a>
+    </p>
+</footer>
+</section>
+</body>
+</html>
